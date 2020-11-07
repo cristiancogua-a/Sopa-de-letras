@@ -13,22 +13,22 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="jquery-ui.css">
         <link href="jquery.tagit.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="jquery.min.js">
-            
-        </script> 
+           
+        </script>
         <script type="text/javascript" src="wordfind.js">
-            
-        </script> 
+           
+        </script>
         <script type="text/javascript" src="wordfindgame.js">
-            
-        </script> 
+           
+        </script>
         <script type="text/javascript" src="bootstrap.min.js" >
-            
+           
         </script>
         <script type="text/javascript" src="jquery-ui.min.js"  >
-            
+           
         </script>
         <script type="text/javascript" src="tag-it.js">
-            
+           
         </script>
     </head>
     <body>
@@ -40,16 +40,14 @@ and open the template in the editor.
             var mytag;
             $(document).ready(function () {
                 mytag = $("#myTags").tagit({});
-				Crear();
+Crear();
             });
         </script>
         <div class="row  ocultar text-center">
             <br />
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4>1.- Escribe las palabras, luego presiona el boton 
-                        <strong>"Crear Juego"</strong>
-                    </h4>
+                    <h4>1.-Jugar</h4>
                 </div>
                 <div class="panel-body">
                     <ul id="myTags">
@@ -63,6 +61,8 @@ and open the template in the editor.
                         <li>DISCODURO</li>
                         <li>CPU</li>
                         <li>HARDWARE</li>
+                        <li>MEMORIARAM</li>
+                        <li>UNIDADDEESTADOSOLIDO</li>
                     </ul>
                 </div>
             </div>
@@ -83,33 +83,34 @@ and open the template in the editor.
                 <div class="row">
                     <div class="panel panel-default">
                         <div class="panel-heading ocultar">
-                            <h4>2.- Crea la sopa e imprimela o simplemente resuelvela online</h4>
+                            <h4>2.- Busca las palabras</h4>
                         </div>
                         <div class="panel-body">
                             <div class="ocultar">
-                                <button onclick="Crear();" class="btn btn-success btn-lg"> Reiniciar </button>
+                                <button onclick="Crear();" target="_blank"> REINICIAR </button>
+                                <button><a href="https://view.genial.ly/5efc1d4b6a01810db8829740/presentation-cartilla-virtual" target="_blank">REGRESAR</a></button>
                                 <!-- <a href="#" class="btn btn-default btn-lg" > Descargar</a>-->
                             </div>
                             <div class="row">
                                 <div class="col-md-3">
                                     <div id='Palabras'>
-                                        
+                                       
                                     </div>
-                                        
+                                       
                                 </div>
                                 <div class="col-md-9">
                                     <div id='juego'>
-                                        
+                                       
                                     </div>
-                                        
+                                       
                                 </div>
-                                    
+                                   
                             </div>
-                                
+                               
                         </div>
-                            
+                           
                     </div>
-                        
+                       
                 </div>
                 <script>
                     var words = [];
@@ -122,7 +123,7 @@ and open the template in the editor.
                         $('#Juegos').show();
                         gamePuzzle = wordfindgame.create(datos, '#juego', '#Palabras');
                         var puzzle = wordfind.newPuzzle(datos, { height: 18, width: 18, fillBlanks: false });
-                        wordfind.print(puzzle);   
+                        wordfind.print(puzzle);  
                     }
                     $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
                 </script>
